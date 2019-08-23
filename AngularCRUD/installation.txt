@@ -1,0 +1,8 @@
+1-> ng new app-name //to create angular app
+2-> ng generate component // to create component
+3-> ng generate servie // to generate service ; add the service to providers in app.module
+4-> add HttpClientModule in imports to work wit http; import { HttpClientModule } from '@angular/common/http';
+5-> use bellow to handle http request in service class
+    import { HttpClient,HttpErrorResponse } from '@angular/common/http';
+    import { throwError } from 'rxjs';
+    import { catchError } from 'rxjs/operators';

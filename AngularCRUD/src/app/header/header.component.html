@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto">
+      <li>
+        <div class="dropdown">
+          <a data-toggle="dropdown" id="dropdownMenuButton" style="font-size:20px; " aria-expanded="true">
+            <i class="fa fa-bell" style="color:#8286C5"></i>
+          </a>
+          <span class="badge badge-info badge-notify" style="font-size:10px;">{{noOfNotification}}</span>
+          <ul class="dropdown-menu dropdown-menu-right notifications" role="menu" aria-labelledby="dropdownMenuButton">
+            <div class="notification-heading">
+              <h1 align="center" class="menu-title">Notifications {{noOfNotification}}</h1>
+            </div>
+            <li class="divider"></li>
+            <hr/>
+            <div class="notifications-wrapper">
+              <a class="content" href="#">
+                <div class="notification-item" *ngFor="let item of task">
+                    <h4 class="item-title">{{item.name}}</h4>
+                    <p class="item-info">{{item.message}}</p>
+                    <p class="item-info">{{item.created_date}}</p>
+                </div>
+              </a>
+            </div>
+            <!--<li class="divider"></li>
+            <div class="notification-footer">
+              <h4 class="menu-title" align="right">View all<i class="fa fa-arrow-right"></i></h4>
+            </div>-->
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/login" routerLinkActive="active" class="nav-link">Login</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/signup" routerLinkActive="active" class="nav-link">SignUp</a>
+      </li>
+    </ul>
+  </div>
+</nav>

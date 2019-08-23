@@ -1,0 +1,75 @@
+.badge-notify{
+    
+    position:relative;
+    color: aliceblue;
+    top: -14px;
+    left: -5px;
+   }
+
+  
+   p { margin: 0 !important; }
+
+
+  /* CSS used here will be applied after bootstrap.css */
+
+.dropdown {
+  display:inline-block;
+  padding:10px;
+}
+
+
+.fa-bell {
+  font-size:1.5rem;
+}
+
+.notifications {
+  background: #FFFFFF ;
+ min-width:420px; 
+}
+
+.notifications-wrapper {
+   overflow:auto;
+    max-height:250px;
+    background: #FFFFFF ;
+  }
+  
+.menu-title {
+   color:#A6ACAF;
+   font-size:1.2rem;
+    }
+
+.fa-arrow-right {
+    margin-left:10px;     
+ }
+
+ 
+.notification-heading, .notification-footer  {
+ padding:2px 2px;
+     }
+    
+      
+.dropdown-menu.divider {
+margin:1px 0;       
+}
+
+.item-title {
+
+font-size:1.3rem;
+color:#000;
+  
+}
+
+.notifications a.content {
+text-decoration:none;
+
+
+}
+  
+.notification-item {
+padding-left:10px;
+margin:1px;
+
+}
+
+
+

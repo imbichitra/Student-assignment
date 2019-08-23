@@ -1,0 +1,9 @@
+.card-center{
+    margin: 100px auto 0 auto;
+}
+
+@media (max-width: 768px) {
+    .fa {
+        width:10px;
+    }
+}

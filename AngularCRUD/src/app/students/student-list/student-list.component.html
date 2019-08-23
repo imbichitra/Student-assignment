@@ -1,0 +1,31 @@
+<div class="container-fluid">
+       <div class="row">
+            <button type="button" class="btn btn-primary mt-3 mb-3" (click)="onRegister()">Register Now</button>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th >#</th>
+                    <th>Name</th>
+                    <th >Roll No</th>
+                    <th >Class</th>
+                    <th >Address</th>
+                    <th ></th>
+                    <th ></th>
+                    <th ></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let student of studentService.students; let i = index">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{student.name}}</td>
+                    <td>{{student.roll_no}}</td>
+                    <td>{{student.class}}</td>
+                    <td>{{student.address}}</td>
+                    <td><button type="button" class="btn btn-secondary" (click)="assignTask(student.roll_no)"><i class="fa fa-pencil"></i> Task</button></td>
+                    <td><button type="button" class="btn btn-primary" (click)="onEdit(student,i)"><i class="fa fa-edit"></i> Edit</button></td>
+                    <td><button type="button" class="btn btn-danger" (click)="onDelete(student.roll_no)"><i class="fa fa-trash"></i> Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+       </div>
+</div>

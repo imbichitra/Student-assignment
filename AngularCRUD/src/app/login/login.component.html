@@ -1,0 +1,36 @@
+<div class="container-fluid">
+        <div class="col-lg-4 col-sm-6 col-md-6 card-center">
+            <div class="card">
+                <div class="card-header">
+                    Login
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="user" (submit)="onSubmit()">
+                            <div class ="alert" [ngClass]="get()" role="alert" *ngIf="errorMessage">
+                                {{errorMessage}}
+                            </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input [class.is-invalid]="formControls.user_id.invalid && formControls.user_id.touched" formControlName="user_id" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small class="text-danger" [class.d-none]="formControls.user_id.valid || formControls.user_id.untouched">Email Required</small>
+                        </div>
+                        
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                <input type="password" [class.is-invalid]="formControls.user_id.password && formControls.user_id.password" formControlName="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                <small class="text-danger" [class.d-none]="formControls.password.valid || formControls.password.untouched">Password Required</small>
+                            </div>
+                            
+                        
+                        <button type="submit" class="btn btn-primary buttonload" [disabled]="user.invalid">
+                            <i *ngIf="isSubmitted" class="fa fa-spinner fa-spin"></i>{{textForSubmit}}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+    

@@ -1,0 +1,31 @@
+<h1 class="display-5 mt-3 mb-5">Studeent Registration</h1>
+<div class ="alert" [ngClass]="get()" role="alert" *ngIf="statusMessage">
+    {{statusMessage}}
+</div>
+<form [formGroup]="studentService.form" (submit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <input type="hidden" formControlName="id">
+                <label>Name</label>
+                <input type="text" class="form-control" formControlName="name" placeholder="Name">
+                
+                <label class="mt-3">Roll Number</label>
+                <input type="text" class="form-control" formControlName="roll_no" [readonly]="isDisable"  placeholder="Roll Number">
+            </div>
+        </div>
+        <div class="col-md-6">
+                <div class="form-group">
+                <label>Class</label>
+                <input type="text" class="form-control"  formControlName="class" placeholder="Class">
+                
+                <label class="mt-3">Address</label>
+                <input type="text" class="form-control" formControlName="address" placeholder="Address">
+            </div>
+        </div>
+    </div>
+    <div class="form-group mt-3">
+        <button type="submit" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+        <button type="button" class="btn btn-outline-dark ml-1" (click)="onClose()"><i class="fa fa-close"></i> Close</button>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<div class="container-fluid">
+        <h1 class="display-5 mt-0 mb-4">Assign Task</h1>
+    <div>     
+        <form [formGroup]="taskForm" (submit)="onSubmit()">
+            <div class="form-group">
+                <input formControlName="message" type="text" class="form-control" placeholder="Enter Task">
+            </div>
+            <button type="submit" [disabled]="taskForm.invalid" class="btn btn-dark"><i class="fa fa-database"></i> Submit</button>
+            <button type="button" class="btn btn-outline-dark ml-1" (click)="onClose()"><i class="fa fa-close"></i> Close</button>
+        </form>
+    </div>
+</div>

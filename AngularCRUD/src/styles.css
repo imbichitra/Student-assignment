@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.fill-remain-space {
+    flex: 1 1 auto;
+}
+
+.btn-dialog-close{
+    width: 45px;
+    min-width: 0px !important;
+    height: 40px;
+    padding: 0px !important;
+  }
