@@ -41,7 +41,9 @@ export class AssignTaskComponent implements OnInit {
     }
     console.log(obj);
     this.taskService.assignTask(obj).subscribe(
-      res=>console.log(res),
+      res=>{
+        this.dialogRef.close();
+      },
       err=>console.log(err)
     )
   }
